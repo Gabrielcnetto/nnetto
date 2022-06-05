@@ -1,0 +1,198 @@
+@charset  "UTF-8";
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 0px;
+    display: grid;
+    justify-items: center;
+    margin-top: 60px;
+    background-color: #f7f7f7;
+}
+header {
+    display: grid;
+    justify-items: center;
+    flex-wrap: wrap;
+
+}
+header ul {
+    list-style: none;
+    display: flex;
+    gap: 60px;
+    padding: 60px;
+    flex-wrap: wrap;
+}
+header ul a {
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: 1.15rem;
+    padding: 5px;
+    color: black;
+    border: 2px solid transparent;
+}
+header ul a:hover {
+    border: 2px solid rgb(249, 43, 7);
+}
+main {
+    display: block;
+}
+.introducao {
+    justify-items: center;
+    display: grid;
+    margin: 40px 9rem;
+    grid-template-columns: 1fr 1fr;
+    max-width: 1000px;
+}
+.introducao-content {
+    display: grid;
+    text-align: right;
+    padding: 40px;
+}
+.introducao-content h2 {
+    font-size: 2rem;
+    align-self: end;
+}
+.introducao-content p {
+    font-size: 1.25rem;
+}
+.butao {
+    width: 8rem;
+    background-color: rgb(249, 43, 7);
+    place-self: end;
+    font-size: 1.30rem;
+    text-decoration: none;
+    color: white;
+    text-align: center;
+    display: block;
+    border-radius: 3px;
+    padding: 8px;
+}
+.butao:hover {
+    background-color: rgb(165, 29, 5);
+}
+.introducao .bicicleta img {
+    max-width: 100%;
+    display: block;
+    justify-self: center;
+    border-radius: 2px;
+}
+.introducao::before {
+    content: ' ';
+    width: 60px;
+    margin-top: 20px;
+    height: 5px;
+    background-color: rgb(249, 43, 7);
+    position: absolute;
+}
+
+.introducao-cover {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+.introducao-cover .vant-total {
+    justify-self: end;
+    align-self: center;
+    font-size: 3rem;
+    text-transform: uppercase;
+    color: rgba(128, 128, 128, 0.425);
+}
+.vantagens {
+    display: grid;
+    max-width: 25rem;
+    justify-content: center;
+    padding: 25px;
+}
+.vantagens ul {
+    list-style-type: none;
+}
+.vantagens-item li {
+    display: grid;
+    grid-template-columns: 1fr auto;
+    border-left: 2px solid transparent;
+}
+.vantagens-item li:hover {
+    border-left: 2px solid rgb(238, 34, 17);
+    background-color: #c7c7c7;
+    border-radius: 4px;
+    box-shadow: 3px 3px 15px rgba(0, 0, 0, 0.534);
+}
+.vantagens-item li h3 {
+    margin-left: 1rem;
+}
+.vantagens-item li p {
+    grid-column: 2;
+    font-size: 1.25rem;
+}
+.vantagens-item li img {
+    place-self: center;
+}
+
+footer {
+    text-align: center;
+    text-decoration: overline;
+    letter-spacing: 0.1rem;
+    font-weight: bold;
+}
+@media (max-width:1000px)  {
+    
+    header {
+        display: flex;
+    }
+    .introducao {
+        grid-template-columns: 1fr;
+        margin-top: 5px;
+    }
+    .introducao h2 {
+        text-align: left;
+    }
+    .introducao p {
+        text-align: left;
+        font-size: 1.27rem;
+    }
+    .butao {
+        justify-self: start;
+    }
+    .introducao img {
+        text-align: center;
+        margin-left: 2rem;
+    }
+    .introducao::before {
+        display: none;
+    }
+    .introducao-cover {
+        grid-template-columns: 1fr;
+    }
+    .introducao-cover .vant-total h2 {
+     display: none;
+    }
+    .vantagens {
+        justify-self: center;
+        justify-items: center;
+    }
+}
+@media (max-width:805px) {
+    .titulo {
+        margin-left: 2em;
+    }
+}
+@media (max-width:750px) {
+    header ul {
+        grid-template-rows: 1fr 1fr 1fr;
+    }
+    .introducao {
+        margin: 1rem 1rem;
+    }
+    .introducao .bicicleta img {
+        max-width: 75%;
+    }
+    .introducao-cover {
+        justify-self: start;
+       display: flex;
+    
+    }
+    footer {
+        justify-self: start;
+        margin-left: 1.6em;
+    }
+    .titulo {
+        margin-left: 2em;
+    }
+}
